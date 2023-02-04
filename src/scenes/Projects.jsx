@@ -13,6 +13,25 @@ const projectsVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
+const Project = ({ title }) => {
+  const overlayStyles = `absolute h-full w-full opacity-0 
+  hover:opacity-90
+  transition duration-500 bg-grey z-30 flex 
+  flex-col justify-center
+  text-center p-16 text-depp-blue`;
+
+  const projectTitle = title.split(" ").join("_").toLowerCase();
+
+  return (
+    <motion.div variants={projectsVariant} className="relative">
+      <div className={overlayStyles}>
+        <p className="text-2xl font-playfair"></p>
+      </div>
+    </motion.div>
+  )
+}
+
+
 const Projects = () => {
   return (
     <section id="projects" className="pt-48 pb-48">
@@ -50,7 +69,16 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
-        ></motion.div>
+        >
+          {/* ROW 1 */}
+          <div className="flex justify-center text-center 
+            items-center p-10 bg-red max-w-[400px] text-2xl 
+            font-playfair font-semibold">
+            BEAUTIFUL USER INTERFACES
+          </div>
+          <Project title="Project 1" />
+
+        </motion.div>
       </div>
     </section>
   );
