@@ -79,7 +79,8 @@ const Testimonials = () => {
         >
           <p className="font-playfair text-6xl">“</p>
           <p className="text-center text-xl">
-            Fames odio in at. At magna ornare dictum lectus.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim
+            illum, nulla laboriosam atque nam reiciendis!
           </p>
         </motion.div>
       </div>
